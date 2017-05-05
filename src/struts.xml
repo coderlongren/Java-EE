@@ -5,7 +5,7 @@
 <struts>
 	<package name="demo1" extends="struts-default" namespace="/">
 		<action name="user_*" class="userAction" method="{1}">
-			<result name="loginsuccess">/index.htm</result>
+			<result name="loginsuccess">/test_jsp.jsp</result>
 			<result name="login">/login.jsp</result>
 		</action>
 		

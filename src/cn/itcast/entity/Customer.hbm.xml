@@ -17,6 +17,12 @@
 		<property name="custSource" column="custSource"></property>
 		<property name="custPhone" column="custPhone"></property>
 		<property name="custMobile" column="custMobile"></property>
+		
+		<!--表示客户的所有联系人  -->
+		<set name = "setLinkMan">
+		<key column = "clid"></key><!-- 外键 -->
+		<one-to-many class = "cn.itcast.entity.LinkMan"/>
+		</set>
 	</class>
 </hibernate-mapping>
 

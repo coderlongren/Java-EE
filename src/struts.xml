@@ -27,6 +27,9 @@
 			<!-- 条件查询 -->
 			<result name="listcondition">/jsp/customer/list.jsp</result>
 		</action>
+		<action name = "linkman_*" class = "linkManAction" method = "{1}">
+		<result name = "toAddPage">/jsp/add.jsp</result>
+		</action>
 	</package>
 
 </struts>

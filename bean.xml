@@ -52,7 +52,6 @@
 	</bean> --> 
 	
 	<import resource="classpath:customer.xml"/>
-	<import resource="classpath:linkman.xml"/>
 </beans>
 
 

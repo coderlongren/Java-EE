@@ -24,6 +24,7 @@
 		<!-- 第三部分： 把映射文件放到核心配置文件中 必须的-->
 		<mapping resource="cn/itcast/entity/User.hbm.xml"/>
 		<mapping resource="cn/itcast/entity/Customer.hbm.xml"/>
+		<mapping resource="cn/itcast/entity/LinkMan.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
 

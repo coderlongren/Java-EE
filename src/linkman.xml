@@ -13,16 +13,18 @@
 	http://www.springframework.org/schema/tx
 	http://www.springframework.org/schema/tx/spring-tx.xsd">
 	
-	<bean id = "linkManAction" class = "cn.itcast.action.LinkManAction">
-		<property name="linkManServier" ref = "linkManServier"></property>
+	<bean id="linkmanAction" class="cn.itcast.action.LinkManAction" scope="prototype">
+		<property name="linkManService" ref="linkManService"></property>
+		<property name="customerService" ref="customerService"></property>
+ 	</bean>
+	
+	<bean id="linkManService" class="cn.itcast.service.LinkManService">
+		<property name="linkManDao" ref="linkManDaoImpl"></property>
 	</bean>
-	 
-	 <bean id = "linkManServier" class = "cn.itcast.service.LinkManService">
-	 <property name="linkManDao" ref = "linkManDaoImpl"></property>
-	 </bean>
-	 <bean id = "linkManDaoImpl" class = "cn.itcast.dao.LinkManDaoImpl">
-	 	<property name="sessionFactory" ref="sessionFactory"></property>
-	 </bean>
+	
+	<bean id="linkManDaoImpl" class="cn.itcast.dao.LinkManDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>
 
 

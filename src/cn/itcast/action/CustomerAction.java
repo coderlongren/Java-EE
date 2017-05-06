@@ -56,6 +56,7 @@ public class CustomerAction extends ActionSupport implements ModelDriven<Custome
 		PageBean pageBean = customerService.listpage(currentPage);
 		//放到域对象里面
 		ServletActionContext.getRequest().setAttribute("pageBean", pageBean);
+		System.out.println("listpage.........");
 		return "listpage";
 	}
 	

@@ -15,7 +15,7 @@
 </HEAD>
 <BODY>
 	<FORM id=form1 name=form1
-		action="${pageContext.request.contextPath }/linkmanServlet?method=addsubmit"
+		action="${pageContext.request.contextPath }/linkman_addLinkMan.action"
 		method=post>
 		
 
@@ -48,7 +48,14 @@
 						<TABLE cellSpacing=0 cellPadding=5  border=0>
 							<tr>
 								<td>所属客户：</td>
-								<td colspan="3"><input type="text" name="custId" style="WIDTH: 180px"/></td>
+								<td colspan="3">
+									<!--  吧域对象所以客户的list显示到下拉列表中去-->
+									<select name = "cid">
+										<c:forEach var = "customer" items = "${listCustomer}">
+											<option  value = "${customer.cid} ">${customer.custName }</option>>
+										</c:forEach>
+									</select>
+								</td>
 							</tr>
 							<TR>
 								<td>联系人名称：</td>
@@ -58,8 +65,8 @@
 								</td>
 								<td>联系人性别：</td>
 								<td>
-								<input type="radio" value="1" name="lkmGender">男
-								<input type="radio" value="2" name="lkmGender">女
+								<input type="radio" value="男" name="lkmGender">男
+								<input type="radio" value="女" name="lkmGender">女
 								</td>
 							</TR>
 							<TR>

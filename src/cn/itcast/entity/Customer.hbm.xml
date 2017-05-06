@@ -20,7 +20,7 @@
 		
 		<!--表示客户的所有联系人  -->
 		<set name = "setLinkMan">
-		<key column = "clid"></key><!-- 外键 -->
+		<key column = "clid"></key>
 		<one-to-many class = "cn.itcast.entity.LinkMan"/>
 		</set>
 	</class>

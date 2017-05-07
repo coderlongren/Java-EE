@@ -3,6 +3,9 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
+	<constant name = "struts.multipart.maxSize" value = "209715200"></constant>
+	
+
 	<package name="demo1" extends="struts-default" namespace="/">
 		<action name="user_*" class="userAction" method="{1}">
 			<result name="loginsuccess">/index.htm</result>
@@ -29,7 +32,13 @@
 		</action>
 		<action name="linkman_*" class="linkmanAction" method="{1}">
 			<result name = "toAddPage">/jsp/linkman/add.jsp</result>
-			<result name = "addlinkMan">/jsp/linkman/add.jsp</result>
+			<result name = "addLinkMan">/jsp/success.jsp</result>
+			
+			<!-- 上传文件过大 返回到错误页面 -->
+			<result name = "input">/jsp/error.jsp</result>
+			<result name = "list">/jsp/linkman/list.jsp</result>
+			<result name = "showLinkMan">/jsp/linkman/edit.jsp</result>
+			
 		</action>
 	</package>
 

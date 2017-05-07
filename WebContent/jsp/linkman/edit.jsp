@@ -48,7 +48,12 @@
 						<TABLE cellSpacing=0 cellPadding=5  border=0>
 							<tr>
 								<td>所属客户：</td>
-								<td colspan="3"><input type="text" name="custId" style="WIDTH: 180px" value="${linkman.cstCustomer.custId}" /></td>
+								<td colspan="3">
+									<select name = "customer.cid">
+									
+									</select>
+								</td>
+								
 							</tr>
 							<TR>
 								<td>联系人名称：</td>
@@ -58,9 +63,9 @@
 								</td>
 								<td>联系人性别：</td>
 								<td>
-								<input type="radio" value="1" name="lkmGender" <c:if test="${linkman.lkmGender=='1' }">checked</c:if>>男
+								<input type="radio" value="1" name="lkmGender" <c:if test="${linkman.lkmGender=='男' }">checked</c:if>>男
 								
-								<input type="radio" value="2" name="lkmGender" <c:if test="${linkman.lkmGender=='2' }">checked</c:if>>女
+								<input type="radio" value="2" name="lkmGender" <c:if test="${linkman.lkmGender=='女' }">checked</c:if>>女
 								</td>
 							</TR>
 							<TR>
